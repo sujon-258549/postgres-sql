@@ -1,0 +1,2 @@
+-- Active: 1747661419171@@127.0.0.1@5432@first1
+SELECT * FROM user2;
