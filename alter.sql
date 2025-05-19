@@ -120,3 +120,5 @@ INSERT INTO student (
 
 
 select email as student_email, age, country  FROM  student
+
+select *  FROM   student ORDER BY age DESC
