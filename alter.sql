@@ -121,4 +121,9 @@ INSERT INTO student (
 
 select email as student_email, age, country  FROM  student
 
-select *  FROM   student ORDER BY age DESC
+select *  FROM   student ORDER BY bod 
+
+select DISTINCT blood_group FROM  student;
+
+-- filter
+
