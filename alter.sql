@@ -127,3 +127,8 @@ select DISTINCT blood_group FROM  student;
 
 -- filter
 
+SELECT * from student 
+WHERE  blood_group = 'A-' AND email = 'sujon5@example.com';
+
+SELECT * from student 
+WHERE  blood_group = 'AB+' AND email = 'sujon20@example.com';
