@@ -132,3 +132,11 @@ WHERE  blood_group = 'A-' AND email = 'sujon5@example.com';
 
 SELECT * from student 
 WHERE  blood_group = 'AB+' AND email = 'sujon20@example.com';
+
+-- conditional operator 
+
+SELECT * from student 
+WHERE  age !=22 AND age !=21 AND country != 'Bangladesh' ;
+
+-- query first name uppercase use
+SELECT UPPER(last_name) FROM student;
