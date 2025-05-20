@@ -169,5 +169,11 @@ SELECT COALESCE(email, 'email not provide')  from student
 
 SELECT *  from student WHERE last_name IN('Mia')
 
+<<<<<<< HEAD
 SELECT *  from student 
   WHERE age BETWEEN 21 and 22
+=======
+SELECT *  from student WHERE last_name IN('Mia')
+
+SELECT *  from student WHERE last_name IN('Mia')
+>>>>>>> e5c4eaf4ff8b3163c36aa06447b7419a5c5444f3
