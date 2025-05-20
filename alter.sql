@@ -145,6 +145,18 @@ SELECT UPPER(last_name) FROM student;
 SELECT concat(first_name ,' ', last_name) FROM student;
 
 
+SELECT length(first_name) FROM student;
+
 -- postgres tow type function 
 -- 1.scalar function
 -- 2.AGGREGATE function
+
+
+
+-- 2.AGGREGATE function
+SELECT avg(age) FROM student;
+SELECT max(age) FROM student;
+SELECT min(age) FROM student;
+SELECT sum(age) FROM student;
+SELECT count(*) FROM student;
+SELECT max(length(first_name)) FROM student;
