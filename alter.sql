@@ -140,3 +140,11 @@ WHERE  age !=22 AND age !=21 AND country != 'Bangladesh' ;
 
 -- query first name uppercase use
 SELECT UPPER(last_name) FROM student;
+
+-- function use any work
+SELECT concat(first_name ,' ', last_name) FROM student;
+
+
+-- postgres tow type function 
+-- 1.scalar function
+-- 2.AGGREGATE function
