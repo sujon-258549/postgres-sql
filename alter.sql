@@ -165,3 +165,9 @@ SELECT max(length(first_name)) FROM student;
 SELECT COALESCE(email, 'email not provide')  from student
 
 -- coalesce use
+
+
+SELECT *  from student WHERE last_name IN('Mia')
+
+SELECT *  from student 
+  WHERE age BETWEEN 21 and 22
