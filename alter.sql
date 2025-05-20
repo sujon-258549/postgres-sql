@@ -160,3 +160,8 @@ SELECT min(age) FROM student;
 SELECT sum(age) FROM student;
 SELECT count(*) FROM student;
 SELECT max(length(first_name)) FROM student;
+
+-- if not email check and message show
+SELECT COALESCE(email, 'email not provide')  from student
+
+-- coalesce use
