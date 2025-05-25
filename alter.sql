@@ -166,14 +166,78 @@ SELECT COALESCE(email, 'email not provide')  from student
 
 -- coalesce use
 
-
 SELECT *  from student WHERE last_name IN('Mia')
 
-<<<<<<< HEAD
 SELECT *  from student 
   WHERE age BETWEEN 21 and 22
-=======
-SELECT *  from student WHERE last_name IN('Mia')
 
-SELECT *  from student WHERE last_name IN('Mia')
->>>>>>> e5c4eaf4ff8b3163c36aa06447b7419a5c5444f3
+-- data get step to step
+SELECT *  from student 
+  WHERE age BETWEEN start_data and startP_date
+
+
+-- search method mainly last search
+SELECT *  from student 
+  WHERE first_name like '%on'
+  -- First search
+
+SELECT *  from student 
+  WHERE first_name like 'Su%'
+
+  -- middle corrector check
+SELECT *  from student 
+  WHERE first_name like '__j%'
+
+CREATE Table orders (
+  orderId SERIAL PRIMARY KEY,
+  customerId INT,
+  orderDate DATE,
+  totalAmount DECIMAL(10, 2)
+);
+
+CREATE TABLE "order" (
+  orderId SERIAL PRIMARY KEY,
+  customerId INT,
+  orderDate DATE,
+  totalAmount DECIMAL(10, 2)
+);
+
+
+CREATE TABLE orders (
+  orderId SERIAL PRIMARY KEY,
+  customerId INT,
+  orderDate DATE,
+  totalAmount DECIMAL(10, 2)
+);
+
+DROP TABLE orders
+
+
+INSERT INTO orders (customerId, orderDate, totalAmount) VALUES
+(1, '2024-01-10', 250.00),
+(2, '2024-01-15', 125.50),
+(4, '2024-01-20', 320.75),
+(1, '2024-02-01', 150.00),
+(4, '2024-02-05', 220.00),
+(5, '2024-02-10', 450.25),
+(2, '2024-02-15', 80.00),
+(3, '2024-02-20', 90.75),
+(6, '2024-03-01', 300.50),
+(7, '2024-03-05', 110.00),
+(4, '2024-03-10', 175.00),
+(5, '2024-03-15', 200.20),
+(1, '2024-03-20', 99.99),
+(4, '2024-04-01', 500.00),
+(9, '2024-04-05', 320.00),
+(8, '2024-04-10', 275.75),
+(6, '2024-04-15', 60.00),
+(8, '2024-04-20', 130.50),
+(8, '2024-04-25', 210.00),
+(9, '2024-04-30', 145.35);
+
+SELECT * FROM orders
+
+SELECT customerid, count(orderid) FROM orders  GROUP BY  customerid HAVING count( orderid ) > 2;
+
+
+SELECT extract(MONTH FROM orderDate) as month ,sum(totalamount) FROM orders GROUP BY month
